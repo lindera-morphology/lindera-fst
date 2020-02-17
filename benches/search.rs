@@ -1,7 +1,7 @@
 #![feature(test)]
 
 extern crate fnv;
-extern crate tantivy_fst;
+extern crate lindera_fst;
 #[macro_use]
 extern crate lazy_static;
 extern crate test;
@@ -25,7 +25,7 @@ macro_rules! search {
             use std::hash::BuildHasherDefault;
 
             use fnv::FnvHasher;
-            use tantivy_fst::raw::{Builder, Fst};
+            use lindera_fst::raw::{Builder, Fst};
             use test::Bencher;
 
             #[bench]
@@ -49,7 +49,7 @@ macro_rules! search {
 
             #[bench]
             fn fst_streams(b: &mut Bencher) {
-                use tantivy_fst::{IntoStreamer, Streamer};
+                use lindera_fst::{IntoStreamer, Streamer};
                 lazy_static! {
                     static ref FST: Fst = {
                         let mut bfst = Builder::memory();

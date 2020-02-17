@@ -94,7 +94,7 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::Map;
+    /// use lindera_fst::Map;
     ///
     /// let map = Map::from_iter(vec![("a", 1), ("b", 2), ("c", 3)]).unwrap();
     ///
@@ -112,7 +112,7 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::Map;
+    /// use lindera_fst::Map;
     ///
     /// let map = Map::from_iter(vec![("a", 1), ("b", 2), ("c", 3)]).unwrap();
     ///
@@ -140,7 +140,7 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// used. `while let` is useful instead:
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
     ///
     /// let map = Map::from_iter(vec![("a", 1), ("b", 2), ("c", 3)]).unwrap();
     /// let mut stream = map.stream();
@@ -167,7 +167,7 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
     ///
     /// let map = Map::from_iter(vec![("a", 1), ("b", 2), ("c", 3)]).unwrap();
     /// let mut stream = map.keys();
@@ -191,7 +191,7 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
     ///
     /// let map = Map::from_iter(vec![("a", 1), ("b", 2), ("c", 3)]).unwrap();
     /// let mut stream = map.values();
@@ -221,7 +221,7 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// Returns only the key-value pairs in the range given.
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
     ///
     /// let map = Map::from_iter(vec![
     ///     ("a", 1), ("b", 2), ("c", 3), ("d", 4), ("e", 5),
@@ -259,8 +259,8 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     ///
     /// use std::error::Error;
     ///
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
-    /// use tantivy_fst::Regex;
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::Regex;
     ///
     /// # fn main() { example().unwrap(); }
     /// fn example() -> Result<(), Box<Error>> {
@@ -316,8 +316,8 @@ impl<Data: Deref<Target = [u8]>> Map<Data> {
     /// that same key in the all of the streams.
     ///
     /// ```rust
-    /// use tantivy_fst::{Streamer, Map};
-    /// use tantivy_fst::{map::IndexedValue};
+    /// use lindera_fst::{Streamer, Map};
+    /// use lindera_fst::{map::IndexedValue};
     ///
     /// let map1 = Map::from_iter(vec![
     ///     ("a", 1), ("b", 2), ("c", 3),
@@ -432,7 +432,7 @@ impl<'m, 'a, Data: Deref<Target = [u8]>> IntoStreamer<'a> for &'m Map<Data> {
 /// goal without needing to explicitly use `MapBuilder`.
 ///
 /// ```rust
-/// use tantivy_fst::{IntoStreamer, Streamer, Map, MapBuilder};
+/// use lindera_fst::{IntoStreamer, Streamer, Map, MapBuilder};
 ///
 /// let mut build = MapBuilder::memory();
 /// build.insert("bruce", 1).unwrap();
@@ -781,8 +781,8 @@ impl<'m> OpBuilder<'m> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
-    /// use tantivy_fst::map::IndexedValue;
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::map::IndexedValue;
     ///
     /// let map1 = Map::from_iter(vec![
     ///     ("a", 1), ("b", 2), ("c", 3),
@@ -826,8 +826,8 @@ impl<'m> OpBuilder<'m> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
-    /// use tantivy_fst::map::IndexedValue;
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::map::IndexedValue;
     ///
     /// let map1 = Map::from_iter(vec![
     ///     ("a", 1), ("b", 2), ("c", 3),
@@ -869,8 +869,8 @@ impl<'m> OpBuilder<'m> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::{Streamer, Map};
-    /// use tantivy_fst::map::IndexedValue;
+    /// use lindera_fst::{Streamer, Map};
+    /// use lindera_fst::map::IndexedValue;
     ///
     /// let map1 = Map::from_iter(vec![
     ///     ("a", 1), ("b", 2), ("c", 3),
@@ -915,8 +915,8 @@ impl<'m> OpBuilder<'m> {
     /// # Example
     ///
     /// ```rust
-    /// use tantivy_fst::{IntoStreamer, Streamer, Map};
-    /// use tantivy_fst::map::IndexedValue;
+    /// use lindera_fst::{IntoStreamer, Streamer, Map};
+    /// use lindera_fst::map::IndexedValue;
     ///
     /// let map1 = Map::from_iter(vec![
     ///     ("a", 1), ("b", 2), ("c", 3),

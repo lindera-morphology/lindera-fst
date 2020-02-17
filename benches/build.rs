@@ -1,11 +1,11 @@
 #![feature(test)]
 
-extern crate tantivy_fst;
+extern crate lindera_fst;
 extern crate test;
 
 use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
 
-use tantivy_fst::raw::{Builder, Fst};
+use lindera_fst::raw::{Builder, Fst};
 use test::Bencher;
 
 const WORDS: &'static str = include_str!("./../data/words-10000");
