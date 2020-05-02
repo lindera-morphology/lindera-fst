@@ -1,6 +1,6 @@
 [package]
 name = "lindera-fst"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     "Andrew Gallant <jamslam@gmail.com>",
     "Paul Masurel <paul.masurel@gmail.com>",
